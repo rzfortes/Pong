@@ -17,16 +17,13 @@ public class Racquet {
     }
 
     public void move() {
-	// as long as x (value in the x-axis) + xa (speed and direction) is greater than 0, mu-move ang racquet padung sa value of x
-	// likewise, as long as the sum of x and xa is within the range of somewhat "border" ng game
-        if((x + xa > 0) && (x + xa < game.getWidth() - 60)) {
+        if((x + xa > 0) && (x + xa < game.getWidth() - WIDTH)) {
             x = x + xa;
         }
     }
 
-    // paints the racquet
     public void paint(Graphics2D g) {
-        g.fillRect(x, 330, 60, 10);
+        g.fillRect(x, Y, WIDTH, HEIGHT);
     }
 
     public void keyReleased(KeyEvent e) {
@@ -35,10 +32,10 @@ public class Racquet {
 
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-            xa = -1;
+            xa = -game.speed;
         }
         if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            xa = 1;
+            xa = game.speed;
         }
     }
     
@@ -47,7 +44,7 @@ public class Racquet {
     }
     
     public int getTopY() {
-        return Y;
+        return Y - HEIGHT;
     }
 
 }
