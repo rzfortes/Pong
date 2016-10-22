@@ -16,33 +16,31 @@ public class Ball {
         this.game = game;
     }
     
-    // movement of the ball
+    // moves the ball
     void move() {
-        // if the direction of the ball changes, variable will be true
-	// this will be used in a condition where if the direction of the ball still changes, play the sound provided
+        
         boolean changeDirection = true;
         
         if(x + xa < 0) {
-        xa = 1;
+        xa = game.speed;
         }
         if(x + xa > game.getWidth() - DIAMETER) {
-            xa = -1;
+            xa = -game.speed;
         }
         if(y + ya < 0) {
-            ya = 1;
+            ya = game.speed;
         }
-	// nilapas na ang ball, game over
         if(y + ya > game.getHeight() - DIAMETER) {
             game.gameOver();
         }
-	// 
         if(collision()) {
-            ya = -1;
+            ya = -game.speed;
             y = game.racquet.getTopY() - DIAMETER;
+            game.speed++;
         } else {
             changeDirection = false;
         }
-        // condition where if the direction of the ball changes, play the sound provided
+        
         if(changeDirection) {
             Sound.BALL.play();
         }
@@ -55,7 +53,7 @@ public class Ball {
         return game.racquet.getBounds().intersects(getBounds());
     }
 
-    // paints the ball
+    // receives the graphics2D, and paints
     public void paint(Graphics2D g){
         g.fillOval(x, y, DIAMETER, DIAMETER);
     }
