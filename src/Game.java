@@ -39,6 +39,8 @@ public class Game extends JPanel {
 					racquet.keyPressed(e);
 				}
 			});
+			// should not forget, dili mu-move ang racquet if wala ni
+			setFocusable(true);
 		}
 		
 		private void move() {
