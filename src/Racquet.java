@@ -1,14 +1,15 @@
-package minitennis;
+package Pong;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 public class Racquet {
-    private static final int Y = 330;
+    private static final int Y = 340;
     private static final int WIDTH = 60;
     private static final int HEIGHT = 10;
-    int x = 0;
+    // position of the racquet
+    int x = 400 / 2;
     int xa = 0;
     private Game game;
 
