@@ -8,9 +8,12 @@ To myself,
   
     a.) the direction of the ball when player2 racquet and ball collides, 
     
-    b.) the movement of racquets (note that, there's a conflict when both racquets are moved to the same direction. Galisod ang listener kinsa ang unahon i-move or kinsa jud ang i-move if same direction ang both racquets),
+    b.) the movement of racquets 
+    (note that, there's a conflict when both racquets are moved to the same direction. 
+    Galisod ang listener kinsa ang unahon i-move or kinsa jud ang i-move if same direction ang both racquets),
     
-    c.) hahahahahahahah, usahay mu-jump ang score bigger than 1 (like 17 dayon ang score if ang ball and racquet is in the corner jud).
+    c.) hahahahahahahah, usahay mu-jump ang score bigger than 1 
+    (like 17 dayon ang score if ang ball and racquet is in the corner jud).
   
   -figure out how to delete the previous JFrame or reset it man lang.. (this is in JOptionPane, where there's an option (duh, haha) to or    not to restart game
   
