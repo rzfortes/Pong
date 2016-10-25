@@ -21,8 +21,6 @@ To myself,
   
   -add power-up!
   
-  -change the color of the sprite..
-  
   -CHANGE THE SOUND EFFECTS HUHU.. HOW.. WHERE TO START.. HUHU (because creepy hahahhahahhahahha)
   
   -EDIT, REVISE! Check if there's more pretty way to implement things especially the winner part in Game Over function, and some other        things
