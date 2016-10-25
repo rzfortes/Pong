@@ -3,6 +3,8 @@
 To myself,
   
   These are the things you need to do:
+
+  REMOVE RACQUET2
   
   -fix bugs 
   
