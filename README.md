@@ -7,7 +7,7 @@ This game has 2 players. Player 1 gets the lower racquet, while player 2 gets th
 Currently fixing:
   a) bugs
   b) making the players use one racquet class only
-  c) change sound effects
+  c) sound effects
   
 Hopefully, to be added soon:
   - a power-up, where the ball will move faster towards the opponent when the player wants to. 
