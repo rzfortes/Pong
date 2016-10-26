@@ -22,8 +22,8 @@ import javax.swing.JPanel;
 public class Game extends JPanel {
     
     Ball ball = new Ball(this);
-    Racquet racquet = new Racquet(this);
-    Racquet2 racquet2 = new Racquet2(this);
+    Racquet racquet = new Racquet(this, 340);
+    Racquet racquet2 = new Racquet(this, 15);
     
     int speed = 1;
     
@@ -49,11 +49,24 @@ public class Game extends JPanel {
                 racquet2.keyReleased(e);
             }
 
+            //the keys LEFT and RIGHT are for player 1's racquet only; when pressed, the racquet 1 only moves and vice versa
             @Override
             public void keyPressed(KeyEvent e) {
-                racquet.keyPressed(e);
-                racquet2.keyPressed(e);
+                if(e.getKeyCode() == KeyEvent.VK_LEFT){ 
+                    racquet.xa = -speed;
+                } 
+                if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+                    racquet.xa = speed;
+                }
+                
+                if((e.getKeyCode() == KeyEvent.VK_A)) {
+                    racquet2.xa = -speed;
+                } 
+                if(e.getKeyCode() == KeyEvent.VK_D) {
+                    racquet2.xa = speed;
+                }
             }
+            
         });
         // should not forget, dili mu-move ang racquet if wala ni
         setFocusable(true);
@@ -65,6 +78,7 @@ public class Game extends JPanel {
         ball.move();
         racquet.move();
         racquet2.move();
+        //racquet2.move();
     }
     
     @Override
