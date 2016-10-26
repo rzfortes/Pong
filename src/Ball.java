@@ -2,6 +2,7 @@ package Pong;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
 
 public class Ball {
     private static final int DIAMETER = 30;
@@ -50,12 +51,10 @@ public class Ball {
         if(collision()) {
             ya = -game.speed;
             y = game.racquet.getTopY() - DIAMETER;
-            game.speed = game.speed + 1;
             player1++;
         } else if(collision2()) {
             ya = game.speed;
             x = game.racquet2.getTopX() + DIAMETER;
-            game.speed = game.speed + 1;
             player2++;
         } else {
             changeDirection = false;
