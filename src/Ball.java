@@ -2,7 +2,6 @@ package Pong;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
 
 public class Ball {
     private static final int DIAMETER = 30;
@@ -35,18 +34,20 @@ public class Ball {
         if(x + xa > game.getWidth() - DIAMETER) {
             xa = -game.speed;
         }
-        // if ni-lapas sa boundary ng upper racquet/player2, game over
+        // if ni-lapas sa boundary ng upper racquet/player2, game over, player1 gets the point
         if(y + ya < 0) {
+            player1++;
             game.gameOver();
         }
-        // if ni-lapas sa boundary ng player1/lower racquet, game over sad
+        // if ni-lapas sa boundary ng player1/lower racquet, game over, player2 gets the point
         if(y + ya > game.getHeight() - DIAMETER) {
+            player2++;
             game.gameOver();
         }
         /* if nag-collide ang ball ang player1 racquet, direction is up
             player1 score incremented, speed ng racquet incremented also
         
-            likewise for player2, direction is down naman
+            likewise for player2 (collision2), direction is down naman
         */
         if(collision()) {
             ya = -game.speed;
@@ -57,6 +58,7 @@ public class Ball {
             x = game.racquet2.getTopX() + DIAMETER;
             player2++;
         } else {
+            
             changeDirection = false;
         }
         
