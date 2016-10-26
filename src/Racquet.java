@@ -5,9 +5,11 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 public class Racquet {
-    private static final int Y = 340;
+    private static int Y = 340;
     private static final int WIDTH = 60;
     private static final int HEIGHT = 10;
+    int left;
+    int right;
     // position of the racquet
     int x = 400 / 2;
     int xa = 0;
