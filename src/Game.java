@@ -5,7 +5,6 @@
 
 package Pong;
 
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -74,15 +73,19 @@ public class Game extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         // makes the borders of the figures smooth
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setColor(Color.BLACK);
         ball.paint(g2d);
         racquet.paint(g2d);
         racquet2.paint(g2d);
         
         // player 1 score and player 2 score, same font and color
-        g2d.setColor(Color.GRAY);
-        g2d.setFont(new Font("Verdana", Font.BOLD, 30));
+        g2d.setColor(Color.BLACK);
+        g2d.setFont(new Font("Verdana", Font.BOLD, 25));
         g2d.drawString(String.valueOf(ball.player2), 10, 30);
         g2d.drawString(String.valueOf(ball.player1), 10, 350);
+        g2d.setFont(new Font("Verdana", Font.BOLD, 10));
+        g2d.drawString("Player 1", 10, 320);
+        g2d.drawString("Player 2", 10, 50);
     }
     
     public void gameOver() {
@@ -92,12 +95,14 @@ public class Game extends JPanel {
         Sound.GAMEOVER.play();
         // for displaying the which player won
         String player;
-        if(ball.player1 > ball.player2) {
+        if(ball.player1 == ball.player2) {
+            player = "No one";
+        } else if(ball.player1 > ball.player2){
             player = "Player 1";
         } else {
             player = "Player 2";
         }
-        JOptionPane.showMessageDialog(this, player + " score is: " + getScore(), "Game Over", JOptionPane.YES_NO_OPTION);
+        JOptionPane.showMessageDialog(this, player + " wins! \nScore is: " + getScore(), "Game Over", JOptionPane.YES_NO_OPTION);
         
         // restarting the game option, NOTE: NEED TO FIND OUT HOW TO DELETE OR RESET BC DUHA KA JFRAME NA
         int n = JOptionPane.showConfirmDialog(this, "Restart game?", "Game Over", JOptionPane.YES_NO_OPTION);
@@ -116,6 +121,7 @@ public class Game extends JPanel {
     public void RestartGame() throws InterruptedException {
         JFrame frame = new JFrame("Mini Tennis");
         Game game = new Game();
+        game.setBackground(Color.LIGHT_GRAY);
         frame.add(game);
         frame.setSize(300, 400);
         frame.setVisible(true);
@@ -132,6 +138,7 @@ public class Game extends JPanel {
         // the window that will frame the panel object of minitennis
         JFrame frame = new JFrame("Mini Tennis");
         Game game = new Game();
+        game.setBackground(Color.LIGHT_GRAY);
         frame.add(game);
         frame.setSize(300, 400);
         frame.setVisible(true);
