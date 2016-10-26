@@ -1,6 +1,5 @@
 # Pong
 
-(Deadline extended! Thank you sir!)
 
 A modified version of Mini Tennis from, Edu4 Java: Game Programming for Beginners. (http://www.edu4java.com/en/game/game0-en.html)
 
