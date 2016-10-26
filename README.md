@@ -1,30 +1,12 @@
 # Pong
 
-To myself,
-  
-  These are the things you need to do:
+A modified version of Mini Tennis from, Edu4 Java: Game Programming for Beginners. (http://www.edu4java.com/en/game/game0-en.html)
 
-  REMOVE RACQUET2
+This game has 2 players. Player 1 gets the lower racquet, while player 2 gets the upper one. To move the racquet of player 1, use the LEFT and RIGHT arrow keys. To move the racquet of player 2, use the characters 'A'(to go left) and 'D'(to go right). Each player shoud be able to catch the ball with their racquets. The first player to get 3 points, wins. After the game ends, user can restart a new game if he wants to.
+
+Currently fixing:
+  a) bugs
+  b) making the players use one racquet class only
   
-  -fix bugs 
-  
-    a.) the direction of the ball when player2 racquet and ball collides, 
-    
-    b.) the movement of racquets 
-    (note that, there's a conflict when both racquets are moved to the same direction. 
-    Galisod ang listener kinsa ang unahon i-move or kinsa jud ang i-move if same direction ang both racquets),
-    
-    c.) hahahahahahahah, usahay mu-jump ang score bigger than 1 
-    (like 17 dayon ang score if ang ball and racquet is in the corner jud).
-  
-  -figure out how to delete the previous JFrame or reset it man lang.. (this is in JOptionPane, where there's an option (duh, haha) to or    not to restart game
-  
-  -add power-up!
-  
-  -CHANGE THE SOUND EFFECTS HUHU.. HOW.. WHERE TO START.. HUHU (because creepy hahahhahahhahahha)
-  
-  -EDIT, REVISE! Check if there's more pretty way to implement things especially the winner part in Game Over function, and some other        things
-  
-  -Lastly, description for this game, here! (This can be done on Wed xD)
-  
-  -END-
+Hopefully, to be added soon:
+  - a power-up, where the ball will move faster towards the opponent when the player wants to. 
