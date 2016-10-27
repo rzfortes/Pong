@@ -78,7 +78,6 @@ public class Game extends JPanel {
         ball.move();
         racquet.move();
         racquet2.move();
-        //racquet2.move();
     }
     
     @Override
@@ -109,9 +108,7 @@ public class Game extends JPanel {
         Sound.GAMEOVER.play();
         // for displaying the which player won
         String player;
-        if(ball.player1 == ball.player2) {
-            player = "No one";
-        } else if(ball.player1 > ball.player2){
+        if(ball.player1 > ball.player2) {
             player = "Player 1";
         } else {
             player = "Player 2";
