@@ -52,10 +52,12 @@ public class Ball {
         if(collision()) {
             ya = -game.speed;
             y = game.racquet.getTopY() - DIAMETER;
+            game.speed = game.speed + 1;
             player1++;
         } else if(collision2()) {
             ya = game.speed;
             x = game.racquet2.getTopX() + DIAMETER;
+            game.speed = game.speed + 1;
             player2++;
         } else {
             
