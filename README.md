@@ -11,7 +11,7 @@ To be fixed:
   
 Update:
   - players already uses one racquet class only. The thing is, if player 1's racquet moves, player 2's racquet will not be able to move. And vice versa.
-  - changed the gameover sound to (a/an) 8 bit pingpong sound from, OpenGameArt.Org (http://www.edu4java.com/en/game/game10.html) The "sounds_ping_pong_8bit.zip" file was the only one downloaded from the site.
+  - changed the gameover sound to (a/an) 8 bit pingpong sound from, OpenGameArt.Org (http://opengameart.org/content/3-ping-pong-sounds-8-bit-style) The "sounds_ping_pong_8bit.zip" file was the only one downloaded from the site.
   
 Hopefully, to be added soon:
   - a power-up, where the ball will move faster towards the opponent when the player wants to. 
